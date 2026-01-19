@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-01-19T23:48:20.178912",
+  "total_files": 6,
+  "successful": 6,
+  "failed": 0,
+  "total_rows_processed": 15646659,
+  "total_rows_inserted": 15646659,
+  "details": [
+    {
+      "status": "success",
+      "file": "C:\\Users\\Sajal\\Desktop\\vendor_performance_analysis\\data\\begin_inventory.csv",
+      "table": "begin_inventory",
+      "total_rows": 206529,
+      "inserted_rows": 206529,
+      "failed_rows": 0,
+      "success_rate": 100.0
+    },
+    {
+      "status": "success",
+      "file": "C:\\Users\\Sajal\\Desktop\\vendor_performance_analysis\\data\\end_inventory.csv",
+      "table": "end_inventory",
+      "total_rows": 224489,
+      "inserted_rows": 224489,
+      "failed_rows": 0,
+      "success_rate": 100.0
+    },
+    {
+      "status": "success",
+      "file": "C:\\Users\\Sajal\\Desktop\\vendor_performance_analysis\\data\\purchases.csv",
+      "table": "purchases",
+      "total_rows": 2372474,
+      "inserted_rows": 2372474,
+      "failed_rows": 0,
+      "success_rate": 100.0
+    },
+    {
+      "status": "success",
+      "file": "C:\\Users\\Sajal\\Desktop\\vendor_performance_analysis\\data\\purchase_prices.csv",
+      "table": "purchase_prices",
+      "total_rows": 12261,
+      "inserted_rows": 12261,
+      "failed_rows": 0,
+      "success_rate": 100.0
+    },
+    {
+      "status": "success",
+      "file": "C:\\Users\\Sajal\\Desktop\\vendor_performance_analysis\\data\\sales.csv",
+      "table": "sales",
+      "total_rows": 12825363,
+      "inserted_rows": 12825363,
+      "failed_rows": 0,
+      "success_rate": 100.0
+    },
+    {
+      "status": "success",
+      "file": "C:\\Users\\Sajal\\Desktop\\vendor_performance_analysis\\data\\vendor_invoice.csv",
+      "table": "vendor_invoice",
+      "total_rows": 5543,
+      "inserted_rows": 5543,
+      "failed_rows": 0,
+      "success_rate": 100.0
+    }
+  ]
+}
