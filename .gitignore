@@ -3,7 +3,7 @@ data/
 
 # Ignore JetBrains IDE folder (e.g., PyCharm, IntelliJ)
 .idea/
-
+.github/
 # ---------------------
 # Python-specific ignores (industry standard)
 # ---------------------
