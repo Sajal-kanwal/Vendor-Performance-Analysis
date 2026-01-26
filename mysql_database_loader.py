@@ -298,9 +298,9 @@ def main():
     # Configuration
     db_config = DatabaseConfig(
         host='localhost',
-        user='root',
-        password='k23ch7408',
-        database='vendor_performance',
+        user='mysql_username',
+        password='your_mysql_password',
+        database='db_name',
         port=3306,
         pool_size=5
     )
