@@ -815,24 +815,27 @@ class RealTimeDataPipeline:
 
 def main():
     """Example usage with multiple data sources"""
+    from config import get_config
 
-    # Database configuration
+    cfg = get_config()
+
+    # Database configuration — loaded from .env via config module
     db_config = DatabaseConfig(
-        host='localhost',
-        user='root',
-        password='your_password',
-        database='enterprise_db',
-        pool_size=10
+        host=cfg.database.host,
+        user=cfg.database.user,
+        password=cfg.database.password,
+        database=cfg.database.database,
+        pool_size=cfg.database.pool_size,
     )
 
-    # Email alerts configuration
+    # Email alerts configuration — loaded from .env
     email_config = EmailConfig(
-        enabled=True,
-        smtp_server='smtp.gmail.com',
-        smtp_port=587,
-        sender_email='alerts@company.com',
-        sender_password='your_app_password',
-        recipient_emails=['admin@company.com', 'team@company.com']
+        enabled=cfg.email.enabled,
+        smtp_server=cfg.email.smtp_server,
+        smtp_port=cfg.email.smtp_port,
+        sender_email=cfg.email.sender_email,
+        sender_password=cfg.email.sender_password,
+        recipient_emails=cfg.email.recipient_emails,
     )
 
     # Initialize pipeline

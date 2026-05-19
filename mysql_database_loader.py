@@ -293,27 +293,35 @@ class CSVToMySQLLoader:
 
 
 def main():
-    """Main execution function with example usage"""
+    """
+    Main execution function.
 
-    # Configuration
+    Reads database credentials from environment variables (via config.py)
+    and loads all CSV files from the configured data directory.
+    """
+    from config import get_config
+
+    cfg = get_config()
+
+    # Build DatabaseConfig from centralized settings
     db_config = DatabaseConfig(
-        host='localhost',
-        user='mysql_username',
-        password='your_mysql_password',
-        database='db_name',
-        port=3306,
-        pool_size=5
+        host=cfg.database.host,
+        user=cfg.database.user,
+        password=cfg.database.password,
+        database=cfg.database.database,
+        port=cfg.database.port,
+        pool_size=cfg.database.pool_size,
     )
 
     # Initialize loader
     loader = CSVToMySQLLoader(db_config)
 
-    # Load all CSV files from directory
+    # Load all CSV files from the configured data directory
     results = loader.load_directory(
-        directory='C:\\Users\\Sajal\\Desktop\\vendor_performance_analysis\\data',
+        directory=str(cfg.paths.data_dir),
         pattern='*.csv',
         if_exists='replace',  # 'replace', 'append', or 'fail'
-        batch_size=1000
+        batch_size=cfg.pipeline.batch_size,
     )
 
     # Generate report

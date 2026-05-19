@@ -1,0 +1,35 @@
+# ──────────────────────────────────────────────────────────────
+# Vendor Performance Analysis — Python Dependencies
+# ──────────────────────────────────────────────────────────────
+
+# Core Data
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Database
+sqlalchemy>=2.0.0
+mysql-connector-python>=8.0.0
+
+# Environment & Config
+python-dotenv>=1.0.0
+
+# Visualization (notebooks)
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Statistical Analysis
+scipy>=1.10.0
+
+# Pipeline — Scheduling & Networking
+schedule>=1.2.0
+requests>=2.31.0
+
+# Pipeline — Remote Sources
+paramiko>=3.0.0
+pyarrow>=12.0.0
+
+# Testing
+pytest>=7.4.0
+
+# Logging (colorized console output)
+colorlog>=6.7.0
